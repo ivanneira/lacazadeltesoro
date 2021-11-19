@@ -236,7 +236,7 @@
 
 			$.get('rutinas/'+ id, function(data) {
 
-                $(".modal-title").html("Detalles");
+                //$(".modal-title").html("Detalles");
 				$('#btn-save').val("view-media");
 				$('#crud_modal').modal('show');
 				$('#id').val(data.id);
