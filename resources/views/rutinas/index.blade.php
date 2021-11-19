@@ -24,13 +24,16 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label type="text" class="form-control" name="nombre" id="nombre" tabindex="1">nombre de la partida</label>
+                                <label type="text">nombre de la partida</label>
+                                <input type="text" class="form-control" name="apellido" id="apellido" tabindex="2">
                             </div>
                             <div class="form-group">
-                                <label type="number" class="form-control" name="nombre" id="nombre" tabindex="1">cantidad</label>
+                                <label type="number">cantidad</label>
+                                <input type="number" class="form-control" name="apellido" id="apellido" tabindex="2">
                             </div>
                             <div class="form-group">
-                                <label type="input" class="form-control" name="nombre" id="nombre" tabindex="1">imagen</label>
+                                <label type="input">imagen</label>
+                                <input type="text" class="form-control" name="apellido" id="apellido" tabindex="2">
                             </div>
                         </div>
 
