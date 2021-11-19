@@ -30,7 +30,7 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label>Mapa (*)</label>
+                                <label>Mapa</label>
                                 {{-- <input type="text" class="form-control" name="apellido" id="apellido" tabindex="2">
                                 <textarea class="form-control" name="detalle" id="detalle"></textarea>--}}
 
@@ -50,7 +50,14 @@
                                         tileSize: 1024,
                                         zoomOffset: -1,
                                     }).addTo(mymap);
-                                mymap.setView(new L.LatLng(53.4053, -6.3784), 13); 
+                                mymap.setView(new L.LatLng(-31.5366345, -68.5524134), 13); 
+
+                                var circle = L.circle([51.508, -0.11], {
+                                    color: 'red',
+                                    fillColor: '#f03',
+                                    fillOpacity: 0.5,
+                                    radius: 500
+                                }).addTo(mymap);
                                 </script>
                             </div>
                         </div>
