@@ -30,7 +30,7 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label>Mapa</label>
+                                <label>Mapa (*)</label>
                                 {{-- <input type="text" class="form-control" name="apellido" id="apellido" tabindex="2">
                                 <textarea class="form-control" name="detalle" id="detalle"></textarea>--}}
 
@@ -47,10 +47,10 @@
                                         attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
                                         maxZoom: 18,
                                         id: 'mapbox/streets-v11',
-                                        tileSize: 1024,
+                                        tileSize: 512,
                                         zoomOffset: -1,
                                     }).addTo(mymap);
-                                mymap.setView(new L.LatLng(-31.5366345, -68.5524134), 13); 
+                                mymap.setView(new L.LatLng(31.5372, -68.5253), 13); 
 
                                 var circle = L.circle([51.508, -0.11], {
                                     color: 'red',
@@ -69,7 +69,14 @@
                         </div>
 
                         <div class="col-md-12">
-  
+                            
+                            <div class="form-group">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" name="active" id="active" checked tabindex="7">
+
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
