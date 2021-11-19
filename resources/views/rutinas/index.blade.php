@@ -47,7 +47,7 @@
                                         attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
                                         maxZoom: 18,
                                         id: 'mapbox/streets-v11',
-                                        tileSize: 512,
+                                        tileSize: 1024,
                                         zoomOffset: -1,
                                     }).addTo(mymap);
                                 mymap.setView(new L.LatLng(53.4053, -6.3784), 13); 
@@ -62,13 +62,14 @@
                         </div>
 
                         <div class="col-md-12">
+                            {{-- 
                             <div class="form-group">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" name="active" id="active" checked tabindex="7">
                                     <label class="custom-control-label" for="active">Inactivo / Activo</label>
                                 </div>
                             </div>
-
+                            --}}
                         </div>
 
                     </div>
@@ -83,10 +84,12 @@
                     <!-- -->
 
             </div>
+
+
             </form>
             <!-- Modal footer -->
             <div class="modal-footer">
-                {{-- <button type="submit" class="btn btn-success modal_ok"></button> --}}
+                {{-- <button type="aceptar" class="btn btn-success modal_ok"></button> --}}
             </div>
 
         </div>
@@ -236,7 +239,7 @@
 
 			$.get('rutinas/'+ id, function(data) {
 
-                //$(".modal-title").html("Detalles");
+                $(".modal-title").html("Detalles");
 				$('#btn-save').val("view-media");
 				$('#crud_modal').modal('show');
 				$('#id').val(data.id);
