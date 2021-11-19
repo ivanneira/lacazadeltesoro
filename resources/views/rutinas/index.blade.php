@@ -50,14 +50,7 @@
                                         tileSize: 512,
                                         zoomOffset: -1,
                                     }).addTo(mymap);
-                                mymap.setView(new L.LatLng(31.5372, -68.5253), 13); 
-
-                                var circle = L.circle([51.508, -0.11], {
-                                    color: 'red',
-                                    fillColor: '#f03',
-                                    fillOpacity: 0.5,
-                                    radius: 500
-                                }).addTo(mymap);
+                                mymap.setView(new L.LatLng(53.4053, -6.3784), 13); 
                                 </script>
                             </div>
                         </div>
@@ -69,11 +62,10 @@
                         </div>
 
                         <div class="col-md-12">
-                            
                             <div class="form-group">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" name="active" id="active" checked tabindex="7">
-
+                                    <label class="custom-control-label" for="active">Inactivo / Activo</label>
                                 </div>
                             </div>
 
@@ -91,12 +83,10 @@
                     <!-- -->
 
             </div>
-
-
             </form>
             <!-- Modal footer -->
             <div class="modal-footer">
-                {{-- <button type="aceptar" class="btn btn-success modal_ok"></button> --}}
+                {{-- <button type="submit" class="btn btn-success modal_ok"></button> --}}
             </div>
 
         </div>
