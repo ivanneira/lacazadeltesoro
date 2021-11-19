@@ -40,10 +40,10 @@
                                         <input type="text" class="form-control" id="name" placeholder="Enter file Name" name="name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="image">Choose Image</label>
+                                        <label for="image">elegir imagen</label>
                                         <input id="image" type="file" name="image">
                                     </div>
-                                    <button type="submit" class="btn btn-dark d-block w-75 mx-auto">Upload</button>
+                                    <button type="subir" class="btn btn-dark d-block w-75 mx-auto">Subir imagen</button>
                                 </form>
                             </div>
                         </div>
