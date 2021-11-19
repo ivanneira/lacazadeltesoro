@@ -1,0 +1,19 @@
+comandos
+
+
+php artisan key:generate  // te crea un token para esta app
+
+php artisan make: migration
+
+    crea un archivo en el cual definis la tabla y sus campos.
+
+php artisan migrate corre una unica vez el script de base de datos
+php artisan migrate:fresh resetea la base de datos (sin registros, solo estructura)
+php artisan migrate:fresh --seed    corre los scripts desde 0 de la base dropeando todo y minando de nuevo
+
+
+
+php artisan serve
+
+
+

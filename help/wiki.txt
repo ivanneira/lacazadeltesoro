@@ -1,0 +1,152 @@
+#WIKI
+
+Correr una migracion especifica:
+php artisan migrate --path=/database/migrations/2021_07_20_140411_create_histories_table
+
+Libreria de permisos y roles para laravel
+https://rimorsoft.com/roles-y-permisos-en-laravel-con-spatie-laravel-permission
+https://spatie.be/docs/laravel-permission/v3/basic-usage/basic-usage
+
+
+
+#Punto de partida - Basico
+
+0) cp .env.example .env
+
+1) Crear la base de datos.
+
+2) Configurar base de datos en archivo .env
+
+3) php artisan key:generate
+
+4) php artisan migrate:fresh --seed
+    --> Esto creara toda la estructura de tablas,
+    --> un usuario admin@admin cuya clave es 123456789
+
+    Nota: si se necesita correr solo los migrates nuevos: el comando es php artisan migrate
+
+5) php artisan serve
+
+
+
+
+
+/*WIKI COMANDOS*/
+
+Crear modelo y migracion (-m)
+
+php artisan make:model SebasItems -m
+
+
+Crear Controller (se debe respetar la convencion de mayusculas y la palabra controller en el nombre del controller)
+php artisan make:controller AlgoController
+
+
+
+/*DATOS RELEVAMIENTOS*/
+
+pantalla para cargar obras sociales. con el mismo modelo q creas al profesional para cargarle la obra social
+
+lo q me pidió además. es q cuando cree al profesional, poder agregarle si es monotributista o responsable inscripto
+para q automáticamente le clave el descuento de ganancias
+tmb q ponerle si se le descuenta fondo de reserva o no
+con el mismo fin, de q sea automático. pero q se peuda editar el monto
+Jonathan Recio, [06.04.21 13:04]
+yy ypor otro lado, cuando se creen las obras sociales, hay q agregarle a qué asociación pertenecen. Xq la asociación también aplica un descuento por obra social,
+Por ej
+Osde factura 1000 se le aplica descuento del 10% de tal asociación. Factura médico 900$
+
+Jonathan Recio, [06.04.21 13:07]
+entonces sería asi la liquidación
+Jonathan Recio, [06.04.21 13:04]
+yy ypor otro lado, cuando se creen las obras sociales, hay q agregarle a qué asociación pertenecen. Xq la asociación también aplica un descuento por obra social,
+Por ej
+Osde factura 1000 se le aplica descuento del 10% de tal asociación. Factura médico 900$
+
+Jonathan Recio, [06.04.21 13:07]
+entonces sería asi la liquidación
+
+Jonathan Recio, [06.04.21 13:07]
+cada asociación tiene un % de descuento distinto
+Jonathan Recio, [06.04.21 13:04]
+yy ypor otro lado, cuando se creen las obras sociales, hay q agregarle a qué asociación pertenecen. Xq la asociación también aplica un descuento por obra social,
+Por ej
+Osde factura 1000 se le aplica descuento del 10% de tal asociación. Factura médico 900$
+
+Jonathan Recio, [06.04.21 13:07]
+entonces sería asi la liquidación
+
+Jonathan Recio, [06.04.21 13:07]
+cada asociación tiene un % de descuento distinto
+
+Jonathan Recio, [06.04.21 13:08]
+asi q debería poder crear el la asociación y el % q aplica
+
+Jonathan Recio, [06.04.21 13:04]
+yy ypor otro lado, cuando se creen las obras sociales, hay q agregarle a qué asociación pertenecen. Xq la asociación también aplica un descuento por obra social,
+Por ej
+Osde factura 1000 se le aplica descuento del 10% de tal asociación. Factura médico 900$
+
+Jonathan Recio, [06.04.21 13:07]
+entonces sería asi la liquidación
+
+Jonathan Recio, [06.04.21 13:07]
+cada asociación tiene un % de descuento distinto
+
+Jonathan Recio, [06.04.21 13:08]
+asi q debería poder crear el la asociación y el % q aplica
+
+Jonathan Recio, [06.04.21 13:25]
+condicion impositiva
+  minotributista -> no ganancias
+  responsable inscripto -> aplica retención de ganancia
+
+  Jonathan Recio, [06.04.21 13:04]
+yy ypor otro lado, cuando se creen las obras sociales, hay q agregarle a qué asociación pertenecen. Xq la asociación también aplica un descuento por obra social,
+Por ej
+Osde factura 1000 se le aplica descuento del 10% de tal asociación. Factura médico 900$
+
+Jonathan Recio, [06.04.21 13:07]
+entonces sería asi la liquidación
+
+Jonathan Recio, [06.04.21 13:07]
+cada asociación tiene un % de descuento distinto
+
+Jonathan Recio, [06.04.21 13:08]
+asi q debería poder crear el la asociación y el % q aplica
+
+Jonathan Recio, [06.04.21 13:25]
+condicion impositiva
+  minotributista -> no ganancias
+  responsable inscripto -> aplica retención de ganancia
+
+Jonathan Recio, [06.04.21 13:28]
+damsu -> depende de ->asoc de clínicas  -> que descuenta 7.5% por comisión por prestación
+
+Jonathan Recio, [06.04.21 13:04]
+yy ypor otro lado, cuando se creen las obras sociales, hay q agregarle a qué asociación pertenecen. Xq la asociación también aplica un descuento por obra social,
+Por ej
+Osde factura 1000 se le aplica descuento del 10% de tal asociación. Factura médico 900$
+
+Jonathan Recio, [06.04.21 13:07]
+entonces sería asi la liquidación
+
+Jonathan Recio, [06.04.21 13:07]
+cada asociación tiene un % de descuento distinto
+
+Jonathan Recio, [06.04.21 13:08]
+asi q debería poder crear el la asociación y el % q aplica
+
+Jonathan Recio, [06.04.21 13:25]
+condicion impositiva
+  minotributista -> no ganancias
+  responsable inscripto -> aplica retención de ganancia
+
+Jonathan Recio, [06.04.21 13:28]
+damsu -> depende de ->asoc de clínicas  -> que descuenta 7.5% por comisión por prestación
+
+Jonathan Recio, [06.04.21 13:31]
+código
+nombre asociación
+porcentaje
+para el abm de asociaciones
